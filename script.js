@@ -36,7 +36,7 @@ function renderCountries(data) {
   data.forEach((country) => {
     const countryCard = document.createElement("a")
     countryCard.classList.add("country-card")
-    countryCard.href = `/RestCountriesAPI/country.html?name=${country.name.common}`
+    countryCard.href = `/country.html?name=${country.name.common}`
     countryCard.innerHTML = `
           <img src="${country.flags.svg}" alt="${country.name.common} flag" />
           <div class="card-text">
@@ -48,6 +48,7 @@ function renderCountries(data) {
               <p><b>Capital: </b>${country.capital?.[0]}</p>
           </div>
   `
+    console.log(countryCard.hreg)
     countriesContainer.append(countryCard)
   })
 }
